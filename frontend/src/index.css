@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 247 248 250;
+  --color-surface: 255 255 255;
+  --color-surface-raised: 255 255 255;
+  --color-border: 228 231 236;
+  --color-ink: 26 32 40;
+  --color-muted: 107 118 131;
+}
+
+.dark {
+  --color-bg: 13 17 23;
+  --color-surface: 20 27 36;
+  --color-surface-raised: 27 36 48;
+  --color-border: 38 48 61;
+  --color-ink: 237 241 245;
+  --color-muted: 138 150 163;
+}
+
+* {
+  border-color: rgb(var(--color-border));
+}
+
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  transition: background-color 0.15s ease;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Sora", system-ui, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid #5B5FEF;
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-border));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card {
+  @apply bg-surface border border-border rounded-card;
+}
+
+.btn-primary {
+  @apply bg-accent text-white text-sm font-medium px-4 py-2 rounded-lg hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-surface-raised border border-border text-ink text-sm font-medium px-4 py-2 rounded-lg hover:border-accent/50 transition;
+}
+
+.input-field {
+  @apply w-full bg-surface-raised border border-border rounded-lg px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-accent outline-none transition;
+}
