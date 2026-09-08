@@ -7,19 +7,18 @@ from app.routers import ai, auth, dashboard, goals, notes, tasks
 
 settings = get_settings()
 
-# Crée les tables si elles n'existent pas encore (suffisant pour ce projet ;
-# passer à Alembic pour de vraies migrations en production).
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(
-    title="Personal AI Dashboard API",
-    description="API du Second Brain personnel : notes, tâches, objectifs et assistant IA.",
-    version="1.0.0",
-)
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.frontend_origin, "http://localhost:5173", "http://localhost:3000"],
+    allow_origins=[
+        settings.frontend_origin,
+        "https://personal-ai-dashboard-2q1t.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:3000",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
