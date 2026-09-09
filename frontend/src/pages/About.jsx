@@ -55,12 +55,14 @@ export default function About() {
           </p>
 
           <div className="flex items-center gap-2 mt-1">
-            <a
-              href="mailto:mohammedhmimid05@gmail.com"
-              className="btn-secondary flex items-center gap-1.5 !py-1.5 !px-3 text-xs"
-            >
+            
+              <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mohammedhmimid05@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary flex items-center gap-1.5 !py-1.5 !px-3 text-xs"
+          ></a>
               <Mail size={13} /> Contact
-            </a>
             <a
               href="https://www.linkedin.com/in/mohammed-hmimid-11b194287/"
               className="btn-secondary flex items-center gap-1.5 !py-1.5 !px-3 text-xs"
