@@ -82,7 +82,12 @@ export default function About() {
         <h2 className="mb-2 text-sm font-semibold font-display">Besoin d'aide ?</h2>
         <p className="text-sm text-muted">
           Une question, un bug ou une suggestion ? Écris-moi directement à{" "}
-          <a href="mailto:mohammedhmimid05@gmail.com" className="text-accent hover:underline">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=mohammedhmimid05@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
             mohammedhmimid05@gmail.com
           </a>
           , je réponds généralement sous 24 à 48h.
