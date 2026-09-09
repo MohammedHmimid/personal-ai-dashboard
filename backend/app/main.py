@@ -15,7 +15,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         settings.frontend_origin,
-        "https://personal-ai-dashboard-2q1t.vercel.app",
+        "https://notebook-with-med.vercel.app",
         "http://localhost:5173",
         "http://localhost:3000",
     ],
