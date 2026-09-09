@@ -56,7 +56,7 @@ export default function About() {
 
           <div className="flex items-center gap-2 mt-1">
             <a
-              href="mailto:mohammedhmimid05@example.com"
+              href="mailto:mohammedhmimid05@gmail.com"
               className="btn-secondary flex items-center gap-1.5 !py-1.5 !px-3 text-xs"
             >
               <Mail size={13} /> Contact
@@ -82,8 +82,8 @@ export default function About() {
         <h2 className="mb-2 text-sm font-semibold font-display">Besoin d'aide ?</h2>
         <p className="text-sm text-muted">
           Une question, un bug ou une suggestion ? Écris-moi directement à{" "}
-          <a href="mailto:mohammedhmimid05@example.com" className="text-accent hover:underline">
-            mohammedhmimid05@gmail.com.com
+          <a href="mailto:mohammedhmimid05@gmail.com" className="text-accent hover:underline">
+            mohammedhmimid05@gmail.com
           </a>
           , je réponds généralement sous 24 à 48h.
         </p>
