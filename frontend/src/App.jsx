@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import DashboardLayout from "./components/layout/DashboardLayout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import About from "./pages/About";
 import AIAssistant from "./pages/AIAssistant";
 import Dashboard from "./pages/Dashboard";
 import Goals from "./pages/Goals";
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="goals" element={<Goals />} />
         <Route path="assistant" element={<AIAssistant />} />
         <Route path="settings" element={<Settings />} />
+        <Route path="about" element={<About />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />

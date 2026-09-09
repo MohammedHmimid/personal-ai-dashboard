@@ -1,5 +1,6 @@
 import {
   CheckSquare,
+  Info,
   LayoutDashboard,
   Loader2,
   MessageSquare,
@@ -17,6 +18,7 @@ const NAV_ITEMS = [
   { to: "/goals", label: "Goals", icon: Target },
   { to: "/assistant", label: "AI Assistant", icon: MessageSquare },
   { to: "/settings", label: "Settings", icon: Settings },
+  { to: "/about", label: "Support & À propos", icon: Info },
 ];
 
 export default function Sidebar({ open, onClose }) {
