@@ -6,6 +6,7 @@ import { useAuth } from "../context/AuthContext";
 export default function Register() {
   const { register } = useAuth();
   const navigate = useNavigate();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,16 +16,21 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
     if (password.length < 8) {
       setError("Le mot de passe doit contenir au moins 8 caractères.");
       return;
     }
+
     setLoading(true);
+
     try {
       await register(name, email, password);
       navigate("/");
     } catch (err) {
-      setError(err.response?.data?.detail || "Impossible de créer le compte.");
+      setError(
+        err.response?.data?.detail || "Impossible de créer le compte."
+      );
     } finally {
       setLoading(false);
     }
@@ -38,14 +44,27 @@ export default function Register() {
         transition={{ duration: 0.25 }}
         className="w-full max-w-sm"
       >
+        {/* Logo */}
         <div className="flex items-center gap-2 justify-center mb-8">
-          <span className="text-accent text-xl">✦</span>
-          <span className="font-display font-semibold text-lg">SecondBrain</span>
+          <img
+            src="https://api.iconify.design/lucide:brain-circuit.svg?color=%2310b981"
+            alt="SecondBrain"
+            className="w-6 h-6"
+          />
+
+          <span className="font-display font-semibold text-lg">
+            SecondBrain
+          </span>
         </div>
 
         <div className="card p-6">
-          <h1 className="font-display font-semibold text-xl mb-1">Créer ton espace</h1>
-          <p className="text-sm text-muted mb-6">Centralise notes, tâches et objectifs en un endroit.</p>
+          <h1 className="font-display font-semibold text-xl mb-1">
+            Créer ton espace
+          </h1>
+
+          <p className="text-sm text-muted mb-6">
+            Centralise notes, tâches et objectifs en un endroit.
+          </p>
 
           {error && (
             <div className="mb-4 text-sm text-danger bg-danger/10 border border-danger/20 rounded-lg px-3 py-2">
@@ -55,7 +74,10 @@ export default function Register() {
 
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <div>
-              <label className="text-xs font-medium text-muted mb-1 block">Nom complet</label>
+              <label className="text-xs font-medium text-muted mb-1 block">
+                Nom complet
+              </label>
+
               <input
                 required
                 className="input-field"
@@ -63,8 +85,12 @@ export default function Register() {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
+
             <div>
-              <label className="text-xs font-medium text-muted mb-1 block">Email</label>
+              <label className="text-xs font-medium text-muted mb-1 block">
+                Email
+              </label>
+
               <input
                 type="email"
                 required
@@ -73,8 +99,12 @@ export default function Register() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+
             <div>
-              <label className="text-xs font-medium text-muted mb-1 block">Mot de passe</label>
+              <label className="text-xs font-medium text-muted mb-1 block">
+                Mot de passe
+              </label>
+
               <input
                 type="password"
                 required
@@ -84,7 +114,12 @@ export default function Register() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button type="submit" disabled={loading} className="btn-primary mt-2">
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary mt-2"
+            >
               {loading ? "Création..." : "Créer mon compte"}
             </button>
           </form>
