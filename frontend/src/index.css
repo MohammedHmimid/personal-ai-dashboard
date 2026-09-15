@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: 247 248 250;
+  --color-bg: 245 246 248;
   --color-surface: 255 255 255;
-  --color-surface-raised: 255 255 255;
-  --color-border: 228 231 236;
-  --color-ink: 26 32 40;
-  --color-muted: 107 118 131;
+  --color-surface-raised: 240 241 244;
+  --color-border: 223 226 231;
+  --color-ink: 18 22 28;
+  --color-muted: 91 101 114;
 }
 
 .dark {
-  --color-bg: 13 17 23;
-  --color-surface: 20 27 36;
-  --color-surface-raised: 27 36 48;
-  --color-border: 38 48 61;
-  --color-ink: 237 241 245;
-  --color-muted: 138 150 163;
+  --color-bg: 11 14 19;
+  --color-surface: 18 22 29;
+  --color-surface-raised: 23 28 36;
+  --color-border: 38 44 54;
+  --color-ink: 231 233 237;
+  --color-muted: 138 147 160;
 }
 
 * {
@@ -25,7 +25,7 @@
 }
 
 body {
-  @apply bg-bg text-ink font-sans antialiased;
+  @apply font-sans antialiased bg-bg text-ink;
   transition: background-color 0.15s ease;
 }
 
@@ -34,7 +34,7 @@ h1, h2, h3, h4, .font-display {
 }
 
 :focus-visible {
-  outline: 2px solid #5B5FEF;
+  outline: 2px solid #1F4E5F;
   outline-offset: 2px;
 }
 
@@ -51,17 +51,17 @@ h1, h2, h3, h4, .font-display {
 }
 
 .card {
-  @apply bg-surface border border-border rounded-card;
+  @apply border bg-surface border-border rounded-card;
 }
 
 .btn-primary {
-  @apply bg-accent text-white text-sm font-medium px-4 py-2 rounded-lg hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply px-4 py-2 text-sm font-medium text-white transition rounded-lg bg-accent hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
 }
 
 .btn-secondary {
-  @apply bg-surface-raised border border-border text-ink text-sm font-medium px-4 py-2 rounded-lg hover:border-accent/50 transition;
+  @apply px-4 py-2 text-sm font-medium transition border rounded-lg bg-surface-raised border-border text-ink hover:border-accent/50;
 }
 
 .input-field {
-  @apply w-full bg-surface-raised border border-border rounded-lg px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-accent outline-none transition;
+  @apply w-full px-3 py-2 text-sm transition border rounded-lg outline-none bg-surface-raised border-border text-ink placeholder:text-muted focus:border-accent;
 }

@@ -16,15 +16,15 @@ export default {
         ink: "rgb(var(--color-ink) / <alpha-value>)",
         muted: "rgb(var(--color-muted) / <alpha-value>)",
         accent: {
-          DEFAULT: "#5B5FEF",
-          soft: "rgba(91, 95, 239, 0.12)",
+          DEFAULT: "#1F4E5F",
+          soft: "rgba(31, 78, 95, 0.12)",
         },
         spark: {
-          DEFAULT: "#F2A93B",
-          soft: "rgba(242, 169, 59, 0.14)",
+          DEFAULT: "#B8862F",
+          soft: "rgba(184, 134, 47, 0.14)",
         },
-        success: "#3FBE8F",
-        danger: "#EF5A6F",
+        success: "#2E9E6D",
+        danger: "#C4495A",
       },
       borderRadius: {
         card: "10px",
