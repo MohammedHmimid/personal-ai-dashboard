@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     ai_provider: str = "mock"  # mock | openai | anthropic
     openai_api_key: str = ""
     anthropic_api_key: str = ""
+    gemini_api_key: str = ""
 
     # CORS
     frontend_origin: str = "http://localhost:5173"
