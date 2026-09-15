@@ -14,8 +14,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        settings.frontend_origin,
         "https://notebook-with-med.vercel.app",
+        "https://personal-ai-dashboard-ten.vercel.app",
         "http://localhost:5173",
         "http://localhost:3000",
     ],
